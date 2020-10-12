@@ -1,10 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>This is Events Page</title>
-</head>
-<body>
-	<h1>This is Events and we will have all events here.</h1>
+<!-- events = {
+	'event_name' : event.name,
+	'organiser' : event.organiser,
+	'time' : event.timestamp,
+} -->
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+				<div class="column is-offset-1 is-4">
+					<h1 class="title">
+						Welcome to the Events
+					</h1>
+				</div>
+            </div>
+        </div>
+	</section>
+	
+	<section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-1 is-4">
+					<section class="hero is-primary" >
+						<div class="hero-body">
+							<div class="container">
+								<h1>
+									Upcoming Event/s
+								</h1>
+							</div>
+						</div>
+					</section>
+                    {% for event in uevents %}
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <span class="title">{{  event.event_name  }}</span>
+                                        <br>
+                                        <span class="subtitle">{{ event.organiser }}</span>
+                                        <br> 
+                                        <br>
+                                        <span class="subtitle">{{ event.time }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+				</div>
+				<div class="column is-offset-3 is-4">
+					<section class="hero is-primary" >
+						<div class="hero-body">
+							<div class="container">
+								<h1>
+									Past Event/s
+								</h1>
+							</div>
+						</div>
+					</section>
+                    {% for event in pevents %}
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <span class="title">{{  event.event_name  }}</span>
+                                        <br>
+                                        <span class="subtitle">{{ event.organiser }}</span>
+                                        <br> 
+                                        <br>
+                                        <span class="subtitle">{{ event.time }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    </footer>
 </body>
+
 </html>
