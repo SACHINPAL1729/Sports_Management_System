@@ -12,10 +12,31 @@ h1{
  overflow: hidden;
 }
 
+.features{
+  padding: 5% 15%;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.icon{
+  color:#d72323;
+  font-size: 5rem;
+  margin:5% 15%;
+}
+.icon:hover{
+  color: #17b978;
+}
+.feature-heading{
+  font-size: 1.5rem;
+}
+
 /* Ids */
+
 #title{
    font-size: 3rem;
 }
+
 #demo{
   padding-top:10px;
 }
