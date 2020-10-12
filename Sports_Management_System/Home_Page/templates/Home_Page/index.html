@@ -11,6 +11,8 @@
   <meta name="google" content="notranslate" />
   <meta content="Mashup templates have been developped by Orson.io team" name="author">
 
+  <title>Title page</title>
+  
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
 
@@ -18,41 +20,49 @@
   <link href="favicon.ico" rel="icon">
   <!-- Bootstrap cdn-->
   <link rel="" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- StyleSheets -->
   <link rel="stylesheet" href="{% static 'Home_Page/style.css'%}">
 
-  <title>Title page</title>
 
 
-<body>
- <!-- Add your content of header -->
+  <body>
+
 <header>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div class="navbar-collapse">
-        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="./index.html#contact-section-container" title="" class="anchor-link">Contact Us</a></li>
-            <li>
-                <p>
-                    <a href="./components.html" class="btn btn-default navbar-btn" >Components</a>
-                </p>
-            </li>
-
-
-        </ul>
-
-      </div>
-    </div>
-  </nav>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
 </header>
 
 
@@ -63,7 +73,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>EIFER</h1>
+                <h1 style="color:blue">EIFER</h1>
                 <p class="">THE SPORTS SOCIETY OF IIIT LUCKNOW</p>
                 <a href="#contact-section-container" class="btn btn-primary btn-lg anchor-link" title="">Get in touch</a>
             </div>
@@ -76,11 +86,7 @@
     <div class="container"> -->
         <div class="row">
             <div class="col-xs-12 col-md-12 section-container-spacer">
-<<<<<<< HEAD
-                <h2 class="text-center">Key Features</h2>
-=======
                 <h2 class="text-center">Sports Management System</h2>
->>>>>>> 5aacd090c0dd859c8141ba071a90fc3ae83e3ac6
             </div>
         </div>
         <div class="row">
@@ -88,43 +94,29 @@
                 <div class="fa-container">
                     <i class="fa fa-comment-o fa-3x" aria-hidden="true"></i>
                 </div>
-<<<<<<< HEAD
-                <h3 class="text-center">Communication</h3>
-                <p>Sports Generates Great communication</p>
-=======
                 <h3 class="text-center">Feedback</h3>
                 <p>Your feedback is very important for us. You can give feedback to Organiser</p>
->>>>>>> 5aacd090c0dd859c8141ba071a90fc3ae83e3ac6
             </div>
 
             <div class="col-xs-12 col-md-4">
                 <div class="fa-container">
                     <i class="fa fa-heart-o fa-3x" aria-hidden="true"></i>
                 </div>
-<<<<<<< HEAD
-                <h3 class="text-center">Passion</h3>
-                <p>Passion is very important.</p>
-=======
                 <h3 class="text-center">For Sports Lover</h3>
                 <p>Integrated Platform for Organiser,Participants and Viewers.</p>
->>>>>>> 5aacd090c0dd859c8141ba071a90fc3ae83e3ac6
             </div>
-            <div class="col-xs-12 col-md-4">
+      ``      <div class="col-xs-12 col-md-4">
                 <div class="fa-container">
                     <i class="fa fa-bell-o fa-3x" aria-hidden="true"></i>
                 </div>
-<<<<<<< HEAD
-                <h3 class="text-center">Notification</h3>
-                <p> Get updated about new Events.</p>
-=======
                 <h3 class="text-center">Notifications</h3>
                 <p> Never Miss an Update with our email notification facilty for Upcoming Events.</p>
->>>>>>> 5aacd090c0dd859c8141ba071a90fc3ae83e3ac6
             </div>
         </div>
     </div>
 </div>
 
+<h1 id="see">Welcome friends</h1>
 <div class="section-container section-half-background-image-container">
     <div class="image-column" style="background-image: url({% static 'Home_Page/images/img-01.jpg'%})"></div>
     <div class="container">

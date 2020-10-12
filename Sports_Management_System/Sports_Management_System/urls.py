@@ -21,6 +21,7 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('',include('Home_Page.urls')),
+    path('register/',include('Home_Page.urls')),
     path('admin/', admin.site.urls),
     url(r'^login/$', auth_views.LoginView.as_view(
     template_name="Home_Page/login.html"),name="login"),
