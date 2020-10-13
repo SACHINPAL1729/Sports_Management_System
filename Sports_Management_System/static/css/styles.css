@@ -1,9 +1,17 @@
 /* Classes */
 
+
 h1{
   color: red;font-size: 10rem;
 }
 
+body{
+  /* font-family: "Montserrat",sans-serif; */
+  text-align: center;
+  font-size: 2rem;
+  /* line-height: 1.5; */
+  font-family: "Montserrat-Black";
+}
 
 /* Manual classes */
 .crop {
@@ -12,10 +20,60 @@ h1{
  overflow: hidden;
 }
 
+.c{
+  font-family: "Montserrat",sans-serif;
+  font-size: 18px;
+  color: grey;
+}
+.crop2 {
+ height: 200px;
+ width: 100%;
+ overflow: hidden;
+}
+
+.features{
+  padding: 5% 15%;
+  background-color:white;
+  position: relative;
+  z-index: 1;
+}
+
+.icon{
+  color:#d72323;
+  font-size: 5rem;
+  margin:5% 15%;
+}
+.icon:hover{
+  color: #17b978;
+}
+.feature-heading{
+  font-size: 1.5rem;
+}
+
+.foo{
+  color: #17b978
+  font-size: 2rem;
+  padding: 2%;
+  text-align: center;
+}
+.foo:hover{
+  color: red;
+}
 /* Ids */
+
 #title{
    font-size: 3rem;
 }
+
 #demo{
   padding-top:10px;
+}
+
+#footer{
+  background-color: white;
+  padding: 7% 20%;
+  /* padding-bottom: 4%;
+  padding-right: 100px;
+  padding-left: 650px; */
+
 }

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %} Candidate Registration {% endblock %}
+
+{% block body %}
+
+<div class="container">
+  <h1>Welcome to Tournament registration</h1>
+
+  <form action="{% url 'addUser' %}" method="post">
+    {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    {{form.username}}
+  </div>
+  <div class="form-group">
+    <label >Sport Name</label>
+    {{form.sportname}}
+  </div>
+  <div class="form-group">
+    <label >Tournament Id</label>
+    {{form.tournamentid}}
+  </div>
+  <div class="form-group">
+    <label >Phone Number</label>
+    {{form.phone}}
+  </div>
+  <div class="form-group">
+    <label >Email address</label>
+    {{form.email}}
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">All Done</label>
+  </div>
+    <input type="submit" name="" value="Register" class="btn btn-success">
+</form>
+    <!-- {{form.as_p}} -->
+
+
+</div>
+
+{% endblock %}

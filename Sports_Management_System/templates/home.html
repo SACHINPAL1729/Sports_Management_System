@@ -11,12 +11,28 @@
             <img src="static/images/logo.png" alt="Logo" style="width: 90px">
             <span style="color:green"> <h3>SPORTS</h3></span></a>
 
-            <div class="btn-toolbar" style="padding-left: 1000px">
-              <div class="btn-group" >
-                <button type="button" class="btn btn-outline-dark"><h5>Particiapant</h5></button>
-                  <div class="btn-toolbar" style="padding-left:15px">
-                    <button type="button" class="btn btn-outline-dark"><h5>Viewer</h5></button>
+            <div class="btn-toolbar" style="padding-left: 1050px">
+              <div class="btn-group ">
+                <div class="dropdown is-hoverable">
+                  <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown"><h5>Participant <span class="caret"></span></h5></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="register/" style="color: #c9d6df"><h3 >Register</h3></a></li>
+                    <li><a href="Events/" style="color: #c9d6df"><h3 >Events</h3></a></li>
+                  </ul>
+                </div>
+
+
+                  <div class="btn-toolbar" style="padding-left:10px" >
+                    <div class="btn-group ">
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-outline-dark dropdown-toggle" data-toggle="dropdown"><h5>Viewer<span class="caret"></span></h5></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="/registration" style="color: #c9d6df"><h3 >View</h3></a></li>
+                          <li><a href="#" style="color: #c9d6df"><h3 >Feedback</h3></a></li>
+                        </ul>
+                      </div>
                   </div>
+                </div>
                 </div>
             </div>
 
@@ -28,9 +44,9 @@
             <!-- navbar links -->
             <div class="collapse navbar-collapse" id="collapseTarget">
               <ul class="navbar-nav" id="title">
-                <li class="nav-item"><a href="#" class="nav-link">HELP</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Update</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -72,26 +88,198 @@
         </div>
 
       <!-- Features -->
-      <!-- <section id="features">
+      <div class="features">
         <div class="row">
           <div class="col-md-4">
-            <i class="fas fa-check-circle icon"></i>
-            <h3 class="feature-heading">Easy to use.</h3>
-            <p>So easy to use, even your Baby could use it.</p>
+            <i class="far fa-comments icon"></i>
+            <h2 >Feedback</h2>
+            <p>Give Feedback So that user experience can be improved</p>
           </div>
           <div class="col-md-4">
             <i class="fas fa-bullseye icon w3-spin"></i>
-            <h3 class="feature-heading">BullsEye</h3>
-            <p>We know what you want and Deliver it to you.</p>
+            <h2 >Bull's Eye </h2>
+            <p>The Game you are Looking for </p>
           </div>
           <div class="col-md-4">
-            <i class="fas fa-heart icon w3-spin"></i>
-            <h3 class="feature-heading">Guaranteed to work.</h3>
-            <p>You Will Love our service else your money back.</p>
+            <!-- <i class="fas fa-heart icon w3-spin">🔔</i> -->
+            <!-- <span class="icon">🔔</span> -->
+            <i class="far fa-bell icon"></i>
+            <h2 >Notifications</h2>
+            <p>Latest Updates of new events and Changes Associated.</p>
           </div>
-        </div> -->
-
+        </div>
+        </div>
       <!-- Features End -->
 
-    <h1>Welcome</h1>
+<!-- Map section -->
+<!-- <div class="">
+    <div class='container-fluid'>
+        <div class="row map-container">
+            <div id="map"></div>
+            <div class="col-xs-10 col-md-4 contact-block-container reveal">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <h3>Phone</h3>
+                        <p>+ 123 45 67 890</p>
+
+                        <h3>E-mail</h3>
+                        <p>hello@email.com</p>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <h3>Address</h3>
+                        <p>42 rue rouelle 75015, Paris</p>
+
+                        <h3>Open hours</h3>
+                        <p>Mon - Fri : 9AM - 5PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Map section End-->
+
+<!-- Specifications -->
+<div class="section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12 section-container-spacer">
+                <h2 class="text-center" style="font-size: 4rem"><a href="Events/">Events</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <img src="static/images/Event1.jpg" alt="" class="crop2 img-responsive">
+                <h3 class="text-center"><a href="Events/" style="">Upcoming</a></h3>
+                <p>All Upcoming Events</p>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <img src="static/images/Event2.jpg" alt="" class="crop2  img-responsive ">
+                <h3 class="text-center"><a href="Events/">Current</a></h3>
+                <p>ALL Current Events</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <img src="static/images/Img3.jpg" alt="" class=" crop2 img-responsive ">
+                <h3 class="text-center"><a href="Events/">Past</a></h3>
+                <p>ALL Past Events</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- specifications end -->
+
+<!--Contact section  -->
+<!-- <div class="section-container" id="contact-section-container pull-right">
+    <div class="container contact-form-container">
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-2 col-md-8">
+                <div class="section-container-spacer">
+                    <h2 class="text-center">Get in touch</h2>
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" placeholder="Enter your message"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1">Email me a copy
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2">I am a human
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send message</button>
+                    <a href="" class="btn btn-default">Reset</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body> -->
+<!-- Contact section ends -->
+  <!-- <h1>Welcome</h1> -->
+
+  <!-- Footer Section -->
+  <!-- <script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+
+    googleMapInit();
+    scrollToAnchor();
+    scrollRevelation('reveal');
+  });
+  </script>
+
+
+  <footer class="footer-container white-text-container">
+      <div class="container">
+          <div class="row">
+                  <div class="col-md-4">
+                      <h4>About us</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sit amet consectetur dolor</p>
+                  </div>
+
+                  <div class="col-md-4">
+                      <h4>Do you like ? Share this !</h4>
+                      <div>
+                          <p>
+                              <a href="https://www.twitter.com" class="fa-icon" title="">
+                          <i class="fa fa-twitter" aria-hidden="true"></i>
+                          </a>
+                              <a href="https://www.facebook.com" class="fa-icon" title="">
+                                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                              </a>
+                              <a href="https://www.linkedin.com" class="fa-icon" title="">
+                                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                              </a>
+                          </p>
+                      </div>
+                      <div>
+                          <p><small>© Untitled | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
+                      </div>
+
+                  </div>
+
+                  <div class="col-md-4">
+
+                      <h4>Subscribe to newsletter</h4>
+
+                      <div class="form-group">
+                          <div class="input-group">
+                              <input type="text" class="form-control footer-input-text">
+                              <div class="input-group-btn">
+                                  <button type="button" class="btn btn-default btn-newsletter ">OK</button>
+                              </div>
+                          </div>
+
+
+                      </div>
+                  </div>
+          </div>
+      </div>
+  </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navbarToggleSidebar();
+  });
+  </script> -->
+<!-- Footer section ends -->
 {% endblock %}
