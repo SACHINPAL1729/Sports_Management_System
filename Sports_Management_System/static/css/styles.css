@@ -1,9 +1,17 @@
 /* Classes */
 
+
 h1{
   color: red;font-size: 10rem;
 }
 
+body{
+  /* font-family: "Montserrat",sans-serif; */
+  text-align: center;
+  font-size: 2rem;
+  /* line-height: 1.5; */
+  font-family: "Montserrat-Black";
+}
 
 /* Manual classes */
 .crop {
@@ -12,9 +20,20 @@ h1{
  overflow: hidden;
 }
 
+.c{
+  font-family: "Montserrat",sans-serif;
+  font-size: 18px;
+  color: grey;
+}
+.crop2 {
+ height: 200px;
+ width: 100%;
+ overflow: hidden;
+}
+
 .features{
   padding: 5% 15%;
-  background-color: white;
+  background-color:white;
   position: relative;
   z-index: 1;
 }
@@ -31,6 +50,14 @@ h1{
   font-size: 1.5rem;
 }
 
+.foo{
+  font-size: 2rem;
+  padding: 2%;
+  text-align: center;
+}
+.foo:hover{
+  color: red;
+}
 /* Ids */
 
 #title{
@@ -39,4 +66,13 @@ h1{
 
 #demo{
   padding-top:10px;
+}
+
+#footer{
+  background-color: white;
+  padding: 7% 20%;
+  /* padding-bottom: 4%;
+  padding-right: 100px;
+  padding-left: 650px; */
+
 }
