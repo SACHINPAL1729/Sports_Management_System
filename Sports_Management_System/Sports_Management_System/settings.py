@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Home_Page.apps.HomePageConfig',
     'Events.apps.EventsConfig',
+    'Feedback.apps.FeedbackConfig',
 ]
 
 MIDDLEWARE = [

@@ -22,10 +22,6 @@ def home(request):
         else:
             past.append(details)
 
-        print(i.name)
-        print("yes")
-        print(i.timestamp)
-
 
     context = {'uevents' : upcoming, 'pevents' : past}
 

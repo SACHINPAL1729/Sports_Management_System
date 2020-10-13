@@ -24,4 +24,5 @@ urlpatterns = [
     path('register/',include('Home_Page.urls')),
     path('admin/', admin.site.urls),
     path('Events/', include('Events.urls')),
+    path('Feedback/', include('Feedback.urls')),
 ]
