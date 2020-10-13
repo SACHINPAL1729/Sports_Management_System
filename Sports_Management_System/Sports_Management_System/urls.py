@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^login/$', auth_views.LoginView.as_view(
     template_name="Home_Page/login.html"),name="login"),
     path('Events/', include('Events.urls')),
+    path('Feedback/', include('Feedback.urls')),
 ]
