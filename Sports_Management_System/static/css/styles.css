@@ -51,6 +51,7 @@ body{
 }
 
 .foo{
+  color: #17b978
   font-size: 2rem;
   padding: 2%;
   text-align: center;
