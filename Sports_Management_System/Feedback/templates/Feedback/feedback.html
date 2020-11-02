@@ -1,9 +1,0 @@
-{% block title %}Feedback Form{% endblock %}
- 
-{% block body %}
-<form action="{% url 'Feedback:home' %}" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" />
-</form>
-{% endblock %}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import event
 import time
 # Create your views here.
-def home(request):
+def Events(request):
 
     events = event.objects.all()
 
@@ -15,7 +15,7 @@ def home(request):
             'organiser' : i.organiser,
             'time' : i.timestamp,
         }
-        
+
         current = str(time.gmtime().tm_year) + str('-') + str(time.gmtime().tm_mon) + str('-') + str(time.gmtime().tm_mday) + str(' ') + str(time.gmtime().tm_hour) + str(':') + str(time.gmtime().tm_min) + str(':') + str(time.gmtime().tm_sec)
         if(current<str(i.timestamp)):
             upcoming.append(details)
@@ -25,4 +25,4 @@ def home(request):
 
     context = {'uevents' : upcoming, 'pevents' : past}
 
-    return render(request, 'Events/Events.html', context)
+    return render(request, 'Events.html', context)
