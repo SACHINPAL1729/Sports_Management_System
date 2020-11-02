@@ -23,5 +23,6 @@ def addUser(request):
         email = form.cleaned_data['email']
         )
         myregister.save()
-    return redirect('Events')
+    return render(request, 'thanks.html')
+    # return redirect('Events')
     # later fix redirect('home') why not working
