@@ -1,0 +1,32 @@
+/* HTML elements */
+body{
+  text-align: center;
+}
+h1{
+  color: purple;
+}
+
+/* HTML classes */
+
+.foo{
+  color: #17b978
+  font-size: 2rem;
+  padding: 2%;
+  text-align: center;
+  font-size: 2rem;
+  /* line-height: 1.5; */
+  font-family: "Montserrat-Black";
+}
+.foo:hover{
+  color: red;
+}
+
+
+/* HTML Ids */
+#footer{
+  background-color: white;
+  padding: 7% 20%;
+  /* padding-bottom: 4%;
+  padding-right: 100px;
+  padding-left: 650px; */
+}
