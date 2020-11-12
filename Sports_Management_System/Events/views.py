@@ -11,6 +11,7 @@ def Events(request):
 
     for i in events:
         details = {
+            'event_id' : i.id,
             'event_name' : i.name,
             'organiser' : i.organiser,
             'time' : i.timestamp,
@@ -26,3 +27,12 @@ def Events(request):
     context = {'uevents' : upcoming, 'pevents' : past}
 
     return render(request, 'Events.html', context)
+
+
+def display_event(request,event_id):
+    try:
+        evnt = event.objects.get(pk=event_id)
+    except event.DoesNotExist:
+        raise Http404("Event does not exist")
+
+    return render(request,'display.html',{'event_details': evnt})
