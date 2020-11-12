@@ -4,3 +4,6 @@ urlpatterns = [
     path('', views.Events, name='Events'),
     path('<int:event_id>/',views.display_event,name='display_event'),
 ]
+
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
