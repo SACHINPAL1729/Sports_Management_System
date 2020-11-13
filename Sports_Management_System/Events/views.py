@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from .models import event
+from .models import event,guest
 import time
+from django.utils import timezone
 # Create your views here.
 def Events(request):
 
@@ -17,7 +18,7 @@ def Events(request):
             'time' : i.timestamp,
         }
 
-        current = str(time.gmtime().tm_year) + str('-') + str(time.gmtime().tm_mon) + str('-') + str(time.gmtime().tm_mday) + str(' ') + str(time.gmtime().tm_hour) + str(':') + str(time.gmtime().tm_min) + str(':') + str(time.gmtime().tm_sec)
+        current = str(timezone.now())
         if(current<str(i.timestamp)):
             upcoming.append(details)
         else:
@@ -35,4 +36,14 @@ def display_event(request,event_id):
     except event.DoesNotExist:
         raise Http404("Event does not exist")
 
-    return render(request,'display.html',{'event_details': evnt})
+    #code to manage guest
+    guests = guest.objects.all()
+    guest_for_this = []
+    for i in guests:
+        if i.id_for_event == event_id:
+            guest_for_this.append(i)
+
+    
+    pass_to_display = {'event_details' : evnt, 'guest_details' : guest_for_this}
+
+    return render(request,'display.html',pass_to_display)
