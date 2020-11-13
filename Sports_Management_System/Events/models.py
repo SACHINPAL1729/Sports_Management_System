@@ -10,10 +10,19 @@ class event(models.Model):
     temp = 'csvfile_for_guest/' + str(id) + '/'
     csvfile = models.FileField(upload_to=temp)
 
-
-
     def __str__(self):
         return self.name
 
     class Meta:
         verbose_name_plural = 'events'
+
+class rule(models.Model,event):
+    event_id = models.IntegerField()
+    rule1 = models.TextField(default='')
+    rule2 = models.TextField(default='')
+    rule3 = models.TextField(default='')
+    rule4 = models.TextField(default='')
+    rule5 = models.TextField(default='')
+
+    def __str__(event):
+        return event.name
