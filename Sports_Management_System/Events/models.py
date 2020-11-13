@@ -16,7 +16,7 @@ class event(models.Model):
         verbose_name_plural = 'events'
 
 
-class rule(models.Model,event):
+class rule(models.Model):
     event_id = models.IntegerField()
     rule1 = models.TextField(default='')
     rule2 = models.TextField(default='')
@@ -24,8 +24,8 @@ class rule(models.Model,event):
     rule4 = models.TextField(default='')
     rule5 = models.TextField(default='')
 
-    def __str__(event):
-        return event.name
+#     def __str__(event):
+#         return event.name
       
 class guest(models.Model):
     id_for_event = models.IntegerField()
