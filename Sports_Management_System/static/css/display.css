@@ -3,6 +3,7 @@ body{
   text-align: center;
 }
 h1{
+  font-size: 5rem;
   color: purple;
 }
 
@@ -20,8 +21,10 @@ h1{
 .foo:hover{
   color: red;
 }
-
-
+.about{
+  font-size: 3rem;
+  color: Green;
+}
 /* HTML Ids */
 #footer{
   background-color: white;
