@@ -7,8 +7,7 @@ class event(models.Model):
     organiser = models.CharField(max_length=100)
     about = models.TextField(default='')
     rules = models.TextField(default='')
-    temp = 'csvfile_for_guest/' + str(id) + '/'
-    csvfile = models.FileField(upload_to=temp)
+    csvfile = models.FileField(upload_to='csvfile_for_guest/')
 
 
 
@@ -17,3 +16,10 @@ class event(models.Model):
 
     class Meta:
         verbose_name_plural = 'events'
+
+class guest(models.Model):
+    id_for_event = models.IntegerField()
+    name = models.CharField(max_length=100)
+    motto = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='images/')
+    

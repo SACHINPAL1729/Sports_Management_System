@@ -36,6 +36,24 @@
 <h1>Contact Details</h1>
 <h1>Viewers Link</h1>
 
+<h1>Guests</h1>
+{% for guest in guest_details %}
+  <div class="box">
+      <article class="media">
+          <div class="media-content">
+              <div class="content">
+                  <p>
+                    {{guest.name}}
+                    {{guest.motto}}
+                    <!-- have to correct it to display image cause image is not loading-->
+                    <!-- <img src="/media/{{guest.image}}">                                     -->
+                  </p>
+              </div>
+          </div>
+      </article>
+  </div>
+  {% endfor %}
+
 <footer id="footer">
   <i class="fab fa-twitter foo"></i>
   <i class="fab fa-facebook-f foo"></i>
