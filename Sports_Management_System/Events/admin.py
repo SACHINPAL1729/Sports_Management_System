@@ -8,7 +8,6 @@ class eventAdmin(admin.ModelAdmin):
 
 admin.site.register(rule)
 
-
 class guestAdmin(admin.ModelAdmin):
     list_display = ("name","id_for_event")
 
