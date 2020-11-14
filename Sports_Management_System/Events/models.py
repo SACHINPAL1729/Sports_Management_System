@@ -42,7 +42,7 @@ class rule(models.Model):
     rule5 = models.TextField(default='',blank=True)
 
     def __str__(self):
-        return str(self.event_id)
+        return str(self.event_name)
 
 class guest(models.Model):
     id_for_event = models.IntegerField()
