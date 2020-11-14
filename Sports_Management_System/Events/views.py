@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import event,guest
+from .models import event,guest,rule
 import time
 from django.utils import timezone
 # Create your views here.

@@ -6,3 +6,6 @@ class EventsConfig(AppConfig):
 
 class GuestsConfig(AppConfig):
     name = 'Guests'
+
+class RulesConfig(AppConfig):
+    name = 'Rules'

@@ -12,3 +12,4 @@ class guestAdmin(admin.ModelAdmin):
     list_display = ("name","id_for_event")
 
 admin.site.register(guest,guestAdmin)
+
