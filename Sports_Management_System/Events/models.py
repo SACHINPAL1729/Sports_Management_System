@@ -15,23 +15,6 @@ class event(models.Model):
     class Meta:
         verbose_name_plural = 'events'
 
-
-# class rule(models.Model):
-#     id= models.OneToOneField(
-#     event,
-#     on_delete=models.CASCADE,
-#     )
-#     event_id = models.IntegerField()
-#     rule1 = models.TextField(default='')
-#     rule2 = models.TextField(default='')
-#     rule3 = models.TextField(default='')
-#     rule4 = models.TextField(default='')
-#     rule5 = models.TextField(default='')
-#
-    # def __str__(self):
-        # return self.
-
-
 class rule(models.Model):
     event_id = models.IntegerField()
     event_name = models.CharField(max_length=50,default='')
