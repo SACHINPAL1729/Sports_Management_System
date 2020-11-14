@@ -1,4 +1,5 @@
 {% load static %}
+{% load media %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -47,7 +48,7 @@
                     {{guest.name}}
                     {{guest.motto}}
                     <!-- have to correct it to display image cause image is not loading-->
-                    <!-- <img src="/media/{{guest.image}}">                                     -->
+                    <img src="/media/{{guest.image}}">                                    
                   </p>
               </div>
           </div>
