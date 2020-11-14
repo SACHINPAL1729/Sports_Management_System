@@ -6,8 +6,11 @@ class event(models.Model):
     timestamp = models.DateTimeField(auto_now_add=False)
     organiser = models.CharField(max_length=100)
     about = models.TextField(default='')
-    rules = models.TextField(default='')
-    csvfile = models.FileField(upload_to='csvfile_for_guest/')
+    # rules = models.TextField(default='')
+    # csvfile = models.FileField(upload_to='csvfile_for_guest/')
+    contact = models.TextField(default='')
+    details = models.TextField(default='')
+    link = models.URLField(blank=True)
 
     def __str__(self):
         return self.name
