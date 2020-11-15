@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 # for login logout signup and all following view is imported from django lib.
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.conf.urls import url
 
@@ -25,4 +27,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Events/', include('Events.urls')),
     path('Feedback/', include('Feedback.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

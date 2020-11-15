@@ -38,12 +38,12 @@ def display_event(request,event_id):
 
     #code to manage guest
     guests = guest.objects.all()
-    guest_for_this = []
-    for i in guests:
-        if i.id_for_event == event_id:
-            guest_for_this.append(i)
+    # guest_for_this = []
+    # for i in guests:
+    #     if i.id_for_event == event_id:
+    #         guest_for_this.append(i)
 
-    
-    pass_to_display = {'event_details' : evnt, 'guest_details' : guest_for_this}
+
+    pass_to_display = {'event_details' : evnt, 'guest_details' : guests}
 
     return render(request,'display.html',pass_to_display)

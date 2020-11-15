@@ -25,6 +25,11 @@ h1{
   font-size: 3rem;
   color: Green;
 }
+.crop2 {
+ height: 300px;
+ width: 100%;
+ overflow: hidden;
+}
 /* HTML Ids */
 #footer{
   background-color: white;

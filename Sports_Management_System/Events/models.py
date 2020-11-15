@@ -10,7 +10,7 @@ class event(models.Model):
     # csvfile = models.FileField(upload_to='csvfile_for_guest/')
     contact = models.TextField(default='')
     details = models.TextField(default='')
-    link = models.URLField(blank=True)
+    link = models.URLField(default='',blank=True)
 
     def __str__(self):
         return self.name

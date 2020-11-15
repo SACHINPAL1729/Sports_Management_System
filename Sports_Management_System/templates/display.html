@@ -1,5 +1,5 @@
 {% load static %}
-{% load media %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -33,28 +33,25 @@
       {{event_details}}
     </div>
     <h1>Rules</h1>
+
     <h1>Prize</h1>
+
+    <h1>Guests</h1>
+    {% for guest in guest_details %}
+              <div class="container crop2">
+                <!-- <div class="col-md-4"> -->
+                  <img src="{{guest.image.url}}" alt="" style="height:400px; width:400px">
+                  <h2>{{guest.name}}</h2><br>
+                  <h2>{{guest.motto}}</h2><br>
+                <!-- </div> -->
+              </div>
+
+    {% endfor %}
+
     <h1>Contact Details</h1>
     <h1>Viewers Link</h1>
   </body>
 
-<h1>Guests</h1>
-{% for guest in guest_details %}
-  <div class="box">
-      <article class="media">
-          <div class="media-content">
-              <div class="content">
-                  <p>
-                    {{guest.name}}
-                    {{guest.motto}}
-                    <!-- have to correct it to display image cause image is not loading-->
-                    <img src="/media/{{guest.image}}">                                    
-                  </p>
-              </div>
-          </div>
-      </article>
-  </div>
-  {% endfor %}
 
 <footer id="footer">
   <i class="fab fa-twitter foo"></i>
