@@ -8,7 +8,6 @@ h1{
 }
 
 /* HTML classes */
-
 .foo{
   color: #17b978
   font-size: 2rem;
@@ -26,9 +25,9 @@ h1{
   color: Green;
 }
 .crop2 {
- height: 300px;
+ height: 400px;
  width: 100%;
- overflow: hidden;
+ /* overflow: hidden; */
 }
 /* HTML Ids */
 #footer{

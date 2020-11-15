@@ -30,26 +30,41 @@
   <body>
     <div class="about">
       <h1>About</h1>
-      {{event_details}}
+      <h2>
+      {{event_details.name}}</h2>
+      <h3>
+      {{event_details.about}}</h3>
+
     </div>
     <h1>Rules</h1>
+    <!-- {% with temp=0 %} -->
+    <!-- {% firstof 'rule1' as temp %} -->
+    <div class="rules alignment" style="text-align:left; padding-left:60px;">
+      {% for rule in rules %}
+        <h2><ul>
+          <li>{{rule}}</li>
+        </ul> </h2>
+      {% endfor %}
+    </div>
+
+    <!-- {%endwith%} -->
 
     <h1>Prize</h1>
 
     <h1>Guests</h1>
     {% for guest in guest_details %}
-              <div class="container crop2">
-                <!-- <div class="col-md-4"> -->
-                  <img src="{{guest.image.url}}" alt="" style="height:400px; width:400px">
+              <div class="container ">
+                  <img src="{{guest.image.url}}" alt="" style="height:350px; width:400px">
                   <h2>{{guest.name}}</h2><br>
-                  <h2>{{guest.motto}}</h2><br>
-                <!-- </div> -->
+                  <h2>"{{guest.motto}}"</h2><br>
               </div>
 
     {% endfor %}
 
     <h1>Contact Details</h1>
+        <h2>{{event_details.contact}}</h2>
     <h1>Viewers Link</h1>
+      <h2>Link for Live stream of the match is : {{event_details.link}}</h2>
   </body>
 
 
