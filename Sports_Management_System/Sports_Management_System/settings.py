@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'Home_Page.apps.HomePageConfig',
     'Events.apps.EventsConfig',
     'Feedback.apps.FeedbackConfig',
+    'Resource_Management.apps.ResourceManagementConfig',
 ]
 
 MIDDLEWARE = [
