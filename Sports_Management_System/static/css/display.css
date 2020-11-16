@@ -8,7 +8,6 @@ h1{
 }
 
 /* HTML classes */
-
 .foo{
   color: #17b978
   font-size: 2rem;
@@ -24,6 +23,11 @@ h1{
 .about{
   font-size: 3rem;
   color: Green;
+}
+.crop2 {
+ height: 400px;
+ width: 100%;
+ /* overflow: hidden; */
 }
 /* HTML Ids */
 #footer{

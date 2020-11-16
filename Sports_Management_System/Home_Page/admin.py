@@ -4,6 +4,7 @@ from .models import RegistrationData
 # Register your models here.
 
 
+
 # @admin.register(RegistrationData)
 class RegistrationDataAdmin(admin.ModelAdmin):
     list_display = ('username','tournamentid', 'point')
