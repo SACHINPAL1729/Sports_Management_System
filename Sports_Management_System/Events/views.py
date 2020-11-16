@@ -1,12 +1,10 @@
 from django.shortcuts import render
-from .models import event,guest,rule
+from .models import *
 import time
 from django.utils import timezone
 # Create your views here.
 def Events(request):
-
     events = event.objects.all()
-
     upcoming = []
     past = []
 
@@ -68,8 +66,23 @@ def display_event(request,event_id):
             if i.rule5:
                 exact_rules.append(i.rule5)
 
+    #code to maintain Prizes
+    prizes = prize.objects.all()
+    prize_for_this = []
+    for p in prizes:
+        if p.event_id == event_id:
+             prize_for_this.append(p)
+
+    #code to maintain contact
+    contacts = contact.objects.all()
+    contact_for_this = []
+    for i in contacts:
+        if i.event_id == event_id:
+            contact_for_this.append(i)
+
     pass_to_display = {'event_details' : evnt, 'guest_details' : guest_for_this,
-    'rules':exact_rules}
+    'rules': exact_rules,'winners':prize_for_this,
+    'contact_details':contact_for_this}
 
 
     return render(request,'display.html',pass_to_display)

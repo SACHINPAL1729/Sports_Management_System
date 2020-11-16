@@ -50,6 +50,7 @@
     <!-- {%endwith%} -->
 
     <h1>Prize</h1>
+      <h2>{{winners.event_name}}</h2>
 
     <h1>Guests</h1>
     {% for guest in guest_details %}
@@ -58,13 +59,22 @@
                   <h2>{{guest.name}}</h2><br>
                   <h2>"{{guest.motto}}"</h2><br>
               </div>
-
     {% endfor %}
 
     <h1>Contact Details</h1>
-        <h2>{{event_details.contact}}</h2>
+    {% for i in contact_details %}
+    <ul>
+      <li>
+        <h2>{{i.contact_name}}</h2>
+        <a href="#"><h3 style="color: green;">{{i.contact_phone}}</h3></a>
+        <a href="#"><h4 style="color: red;">{{i.contact_email}}</h4></a>
+
+      </li>
+    </ul>
+    {% endfor %}
+
     <h1>Viewers Link</h1>
-      <h2>Link for Live stream of the match is : {{event_details.link}}</h2>
+      <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
   </body>
 
 

@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'Home_Page.apps.HomePageConfig',
     'Events.apps.EventsConfig',
     'Feedback.apps.FeedbackConfig',
+    # 'phonenumber_field',
+    # 'phone_field',
 ]
 
 MIDDLEWARE = [
