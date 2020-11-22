@@ -20,7 +20,7 @@ def Events(request):
         current = str(timezone.now())
         if(current<str(i.timestamp)):
             upcoming.append(details)
-        else:
+        elif(current>str(i.timestamp_for_finish)):
             past.append(details)
 
 

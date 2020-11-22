@@ -6,13 +6,13 @@ from django.db.models import Model
 # Create your models here.
 class event(models.Model):
     name = models.CharField(max_length=50)
-    timestamp = models.DateTimeField(auto_now_add=False)
+    timestamp = models.DateTimeField(default='')
+    timestamp_for_finish = models.DateTimeField(default='')
     organiser = models.CharField(max_length=100)
     about = models.TextField(default='')
     # rules = models.TextField(default='')
     # csvfile = models.FileField(upload_to='csvfile_for_guest/')
     contact = models.TextField(default='')
-    details = models.TextField(default='')
     link = models.URLField(default='',blank=True)
 
     def __str__(self):

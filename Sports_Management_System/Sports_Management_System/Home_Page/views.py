@@ -6,8 +6,7 @@ from django.utils import timezone
 
 def home(request):
     events = event.objects.all()
-    upcoming = []
-    past = []
+    current_event = []
 
     for i in events:
         details = {
@@ -18,13 +17,12 @@ def home(request):
         }
 
         current = str(timezone.now())
-        if(current<str(i.timestamp)):
-            upcoming.append(details)
-        else:
-            past.append(details)
+        if(current<str(i.timestamp_for_finish)):
+            current_event.append(details)
 
 
-    context = {'uevents' : upcoming, 'pevents' : past}
+
+    context = {'cevents' : current_event,}
     return render(request, 'home.html',context)
 
 def register(request):
