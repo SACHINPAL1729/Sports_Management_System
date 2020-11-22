@@ -1,9 +1,31 @@
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm
 from .models import RegistrationData
+from Events.models import event
+from django.utils import timezone
 
 def home(request):
-    return render(request, 'home.html')
+    events = event.objects.all()
+    upcoming = []
+    past = []
+
+    for i in events:
+        details = {
+            'event_id' : i.id,
+            'event_name' : i.name,
+            'organiser' : i.organiser,
+            'time' : i.timestamp,
+        }
+
+        current = str(timezone.now())
+        if(current<str(i.timestamp)):
+            upcoming.append(details)
+        else:
+            past.append(details)
+
+
+    context = {'uevents' : upcoming, 'pevents' : past}
+    return render(request, 'home.html',context)
 
 def register(request):
     context = {

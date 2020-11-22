@@ -4,6 +4,16 @@
 
 {% block body %}
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+</head>
+
+
+
     <!-- Nav Bar section -->
       <div class="container-fluid">
       <nav class="navbar navbar-light" style="background: #32e0c4">
@@ -142,6 +152,54 @@
 <!-- Map section End-->
 
 <!-- Specifications -->
+<section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+        <div class="column is-offset-1 is-4">
+          <h1 class="title">
+            CURRENT EVENTS
+          </h1>
+        </div>
+            </div>
+        </div>
+  </section>
+
+<section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    {% for event in uevents %}
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                      <a href="/Events/{{event.event_id}}/"><u style="color: #01c5c4;"><span class="title" style="color: #01c5c4;">
+                                        {{  event.event_name  }}</span></u></a>
+                                        <br>
+                                        <br>
+                                        <span class="subtitle">{{ event.organiser }}</span>
+                                        <br>
+                                        <br>
+                                        <span class="subtitle">{{ event.time }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+          
+</section>
+
+
+
+
+
+
+
 <div class="section-container">
     <div class="container">
         <div class="row">
@@ -156,11 +214,7 @@
                 <p>All Upcoming Events</p>
             </div>
 
-            <div class="col-xs-12 col-md-4">
-                <img src="static/images/Event2.jpg" alt="" class="crop2  img-responsive ">
-                <h3 class="text-center"><a href="Events/">Current</a></h3>
-                <p>ALL Current Events</p>
-            </div>
+            
             <div class="col-xs-12 col-md-4">
                 <img src="static/images/Img3.jpg" alt="" class=" crop2 img-responsive ">
                 <h3 class="text-center"><a href="Events/">Past</a></h3>
