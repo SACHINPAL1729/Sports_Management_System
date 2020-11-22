@@ -79,17 +79,31 @@
     <h1>Viewers Link</h1>
       <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
 
-    <h1>Leader Board</h1>
-    <h2>Player_id   Player_name  PLayer_Points</h2>
-    <ol>
-    {%for i in candidate %}
-    <h2>
-      <li>
-        {{i.id}}       {{i.username}}        {{i.point}}
-      </li>
-    </h2>
-    {%endfor%}
-    </ol>
+    <!-- <h1>Leader Board</h1> -->
+    <!-- <h2>Player_id   Player_name  PLayer_Points</h2> -->
+    <!-- <ol> -->
+      <!-- <div id="container"> -->
+    <!-- {%for i in candidate %} -->
+    <!-- <h2> -->
+      <!-- <li> -->
+    <!-- <div class="row"> -->
+        <!-- <div class="name">{{i.id}}</div><div class="score">{{i.point}}</div> -->
+    <!-- </div> -->
+        <!-- {{i.id}}       {{i.username}}        {{i.point}} -->
+      <!-- </li> -->
+    <!-- </h2> -->
+    <!-- {%endfor%} -->
+    <!-- </div>  -->
+    <!-- </ol> -->
+
+
+  <div id="container" style="position: relative;left: 600px;">
+    {% for i in candidate %}
+  <div class="row">
+    <div class="name">{{i.username}}</div><div class="score">{{i.point}}</div>
+  </div>
+    {% endfor %}
+  </div>
   </body>
 
 
