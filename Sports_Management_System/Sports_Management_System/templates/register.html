@@ -8,7 +8,7 @@
   <h1>Welcome to Tournament registration</h1>
 
   <form action="{% url 'addUser' %}" method="post">
-    {% csrf_token %}
+    {% csrf_token %} 
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     {{form.username}}
@@ -36,8 +36,6 @@
     <input type="submit" name="" value="Register" class="btn btn-success">
 </form>
     <!-- {{form.as_p}} -->
-
-
 </div>
 
 {% endblock %}
