@@ -73,6 +73,7 @@ def display_event(request,event_id):
     for p in prizes:
         if p.event_id == event_id:
              prize_for_this.append(p)
+    
 
     #code to maintain contact
     contacts = contact.objects.all()
