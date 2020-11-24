@@ -1,14 +1,58 @@
+{% extends 'base.html' %}
+
 {% block title %}Feedback Form{% endblock %}
 
 {% block body %}
 
+<section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+				<div class="column is-offset-0 is-6">
+					<h2 class="title" style="font-size: 4rem;color: red;">
+						Feedback Forum
+					</h2 >
+				</div>
+            </div>
+        </div>
+	</section>
+
+
+
 <div class="container">
-  <form action="{% url 'Feedback:Feedback' %}" method="POST">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" />
-  </form>
+  <!-- <h2 style="font-size: 5rem;color: red;">Welcome to Tournament Registration</h2> -->
+
+  <form action="{% url 'Feedback:save_feed' %}" method="post">
+    {% csrf_token %} 
+  <div class="form-group">
+    <label>Your_Name</label>
+    {{form.customer_name}}
+  </div>
+  <div class="form-group">
+    <label >Event</label>
+    {{form.event}}
+  </div>
+  <div class="form-group">
+    <label >Email</label>
+    {{form.email}}
+  </div>
+  <div class="form-group">
+    <label >Details</label>
+    {{form.details}}
+  </div>
+  <div class="form-group">
+    <label >Happy</label>
+    {{form.happy}}
+  </div>
+  <!-- <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Happy</label>
+    {{form.happy}}
+  </div> -->
+    <input type="submit" value="Submit" class="btn btn-success">
+</form>
+    <!-- {{form.as_p}} -->
 </div>
+
 
 
 {% endblock %}

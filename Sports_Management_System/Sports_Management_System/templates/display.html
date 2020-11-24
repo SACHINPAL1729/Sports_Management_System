@@ -4,7 +4,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Display_Event</title>
+    <title>Event {{event_details.id}}</title>
 
     <!-- w3schools css -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -53,8 +53,11 @@
     <h1>Prize</h1>
     {%for i in winners %}
       <h2>{{i.event_name}}</h2>
-      <h2></h2>
+      <h2>{{i.first_prize}} </h2>
+      <h2>{{i.second_prize}} </h2>
+      <h2>{{i.third_prize}} </h2>
     {% endfor %}
+
     <h1>Guests</h1>
     {% for guest in guest_details %}
               <div class="container ">
