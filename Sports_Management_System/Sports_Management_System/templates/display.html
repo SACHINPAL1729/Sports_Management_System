@@ -28,12 +28,14 @@
 
   </head>
   <body>
+    <!-- Code fir About Section -->
     <div class="about">
       <h1>About</h1>
       <h2>
       {{event_details.name}}</h2>
       <h3>{{event_details.about}}</h3>
 
+    <!-- Code for Rule Section -->
     </div>
     <h1>Rules</h1>
     <!-- {% with temp=0 %} -->
@@ -50,6 +52,7 @@
 
     <!-- {%endwith%} -->
 
+    <!-- Code for Prize Section -->
     <h1>Prize</h1>
     {%for i in winners %}
       <h2>{{i.event_name}}</h2>
@@ -58,6 +61,7 @@
       <h2>{{i.third_prize}} </h2>
     {% endfor %}
 
+   <!-- Code for Guests Section -->
     <h1>Guests</h1>
     {% for guest in guest_details %}
               <div class="container ">
@@ -67,6 +71,7 @@
               </div>
     {% endfor %}
 
+<!-- Code for Contact Details Section -->
     <h1>Contact Details</h1>
     {% for i in contact_details %}
     <ul>
@@ -79,10 +84,11 @@
     </ul>
     {% endfor %}
 
+<!-- Code for Viewers Link Section -->
     <h1>Viewers Link</h1>
       <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
 
-    <!-- <h1>Leader Board</h1> -->
+    
     <!-- <h2>Player_id   Player_name  PLayer_Points</h2> -->
     <!-- <ol> -->
       <!-- <div id="container"> -->
@@ -100,13 +106,66 @@
     <!-- </ol> -->
 
 
-  <div id="container" style="position: relative;left: 600px;">
+    <!-- Code For Leader Board -->
+  
+
+  <!-- <div id="container" style="position: relative;left: 20px;padding-right: 10px;width: 100%;
+  height: auto;">
+    <div class="row">
+     <div class="name">
+     <h2>Player Name</h2> </div> <div class="score"><h2>Points</h2></div>
+    </div>
+    
     {% for i in candidate %}
-  <div class="row">
-    <div class="name">{{i.username}}</div><div class="score">{{i.point}}</div>
-  </div>
+    <div class="row">
+      <div class="name">{{i.username}}</div><div class="score">{{i.point}}</div> 
+    </div>
     {% endfor %}
-  </div>
+  </div> -->
+
+  <h1>Leader Board</h1>
+ <table style="width:100%">
+  <tr class="Heading" style="background-color: #1dd3bd;" >
+    <th> <h2 style="color: red;">Rank</h2></th>
+    <th> <h2 style="color: red;">Player Id</h2></th>
+    <th><h2 style="color: red;">Player Name</h2></th>
+    <th><h2 style="color: red;">Points</h2></th>
+  </tr>
+  
+  {% for i in candidate %}
+
+    {% if forloop.counter == 1 %}
+      <tr style="background-color: #fdda16;">
+        <td><h2>{{forloop.counter}}</h2></td>
+        <td><h3>{{i.id}}</h3></td>
+        <td><h2 style="color: blue;">{{i.username}}</h2></td>
+        <td><h2 style="color: black;">{{i.point}}</h2></td>
+      </tr>
+    {% elif forloop.counter == 2 %}
+      <tr style="background-color: #d2d3c9;">
+        <td><h2>{{forloop.counter}}</h2></td>
+        <td><h3>{{i.id}}</h3></td>
+        <td><h2 style="color: blue;">{{i.username}}</h2></td>
+        <td><h2 style="color: black;">{{i.point}}</h2></td>
+      </tr>
+    {% elif forloop.counter == 3 %}
+      <tr style="background-color: #ec823a;">
+        <td><h2>{{forloop.counter}}</h2></td>
+        <td><h3>{{i.id}}</h3></td>
+        <td><h2 style="color: blue;">{{i.username}}</h2></td>
+        <td><h2 style="color: black;">{{i.point}}</h2></td>
+      </tr>
+    {% else %}
+      <tr style="background-color: #a6f6f1">
+        <td><h2>{{forloop.counter}}</h2></td>
+        <td><h3>{{i.id}}</h3></td>  
+        <td><h2 style="color: blue;">{{i.username}}</h2></td>
+        <td><h2 style="color: black;">{{i.point}}</h2></td>
+      </tr>
+    {% endif %}
+
+  {% endfor %}
+  </table> 
   </body>
 
 

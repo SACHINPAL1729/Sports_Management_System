@@ -4,6 +4,7 @@ from Home_Page.models import *
 import time
 from django.utils import timezone
 # Create your views here.
+
 def Events(request):
     events = event.objects.all()
     upcoming = []
@@ -27,6 +28,11 @@ def Events(request):
     context = {'uevents' : upcoming, 'pevents' : past}
 
     return render(request, 'Events.html', context)
+
+
+# Code to ensure leaderboard sorting
+# def sortSixth(val):
+#     return val['point']
 
 
 def display_event(request,event_id):
@@ -83,11 +89,13 @@ def display_event(request,event_id):
             contact_for_this.append(i)
 
     #code to maintain leaderboard
-    candi = RegistrationData.objects.all().order_by('point')  
+    candi = RegistrationData.objects.all().order_by('-point')  
     cand_for_this = []
     for i in candi:
         if i.tournamentid == event_id:
             cand_for_this.append(i)
+
+    # cand_for_this.sort(key=sortSixth)
 
     pass_to_display = {'event_details' : evnt, 'guest_details' : guest_for_this,
     'rules': exact_rules,'winners':prize_for_this,

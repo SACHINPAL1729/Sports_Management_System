@@ -1,10 +1,10 @@
 from django.shortcuts import render,redirect
 from .forms import FeedbackForm
-from .models import feedback
+from .models import *
 
 # Create your views here.
 def Feedback(request):
-    print("Hello Feedback called")
+    # print("Hello Feedback called")
     context = {
         "form":FeedbackForm
     }
