@@ -38,18 +38,18 @@ h1{
   padding-left: 650px; */
 }
 
-#container {
-  width: 600px;
+/*#container {
+  width: 100%;
   height: auto;
-}
+}*/
 
-.row {
+/*.row {
   position: relative;
   display: block;
   width: 100%;
   height: 40px;
   border-bottom: 1px solid #AFAFAF;
-}
+}*/
 
 .name {
   position: relative;
@@ -64,14 +64,18 @@ h1{
   width: 25%;
 }
 
-.row:nth-child(1) {
-  background: gold;
+.dis{
+  display: inline-block;
 }
 
 .row:nth-child(2) {
-  background: #c0c0c0;
+  background: gold;
 }
 
 .row:nth-child(3) {
+  background: #c0c0c0;
+}
+
+.row:nth-child(4) {
   background: #cd7f32;
 }
