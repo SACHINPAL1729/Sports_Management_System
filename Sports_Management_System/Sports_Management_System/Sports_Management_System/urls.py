@@ -27,5 +27,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Events/', include('Events.urls')),
     path('Feedback/', include('Feedback.urls')),
-    path('Resource_Management/', include('Resource_Management.urls'))
+    path('Resource_Management/', include('Resource_Management.urls')),
+    path('Notifications/',include('Notifications.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
