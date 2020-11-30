@@ -1,4 +1,5 @@
 from django import forms
+from .models import RegistrationData
 
 class RegistrationForm(forms.Form):
     username = forms.CharField(max_length=100,
@@ -26,3 +27,5 @@ class RegistrationForm(forms.Form):
                             'class':'form-control',
                             'placeholder':'Your Email'
                             }))
+
+
