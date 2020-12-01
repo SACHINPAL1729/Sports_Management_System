@@ -1,7 +1,59 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<h1>Dosto sambhalo mera Code phat gya</h1>
+{% block title %} Available Resources {% endblock %}
 
+
+{% block body %}
+<section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+        <div class="column is-offset-0 is-6">
+          <h2 class="title" style="font-size: 4rem;color: red;">
+            Rources Available
+          </h2 >
+        </div>
+            </div>
+        </div>
+ </section>
+
+<style>
+table, th, td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+}
+th, td {
+  padding: 15px;
+}
+</style>
+
+<table style="width: 100%; margin:20px;">
+	<th>
+		
+		<h2><b>Item</b></h2>
+	</th>
+	<th>
+		<h2><b>Available</b></h2>
+	</th>
+	<th>
+		<h2><b>Requirement</b></h2>
+	</th>
+	<th>
+		<h2><b>No of Items Needs to be purcahsed</b></h2>
+	</th>
 {% for i in resource %}
-    <p>{{i.name}} : {{i.available}}</p> 
+	<tr>
+		<td>
+		<h2>{{i.name}}</h2>
+		</td>
+		<td>{{i.available}}</td>
+		<td>10</td>
+		<td>
+			{{i.available}}-10
+		</td>	
+	</tr>
 {% endfor %}
+</table>
+
+<hr>
+{% endblock %}
