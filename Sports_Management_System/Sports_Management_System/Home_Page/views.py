@@ -46,3 +46,5 @@ def addUser(request):
     return render(request, 'thanks.html')
     # return redirect('Events')
     # later fix redirect('home') why not working
+
+

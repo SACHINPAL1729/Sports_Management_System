@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Events.apps.EventsConfig',
     'Feedback.apps.FeedbackConfig',
     'Resource_Management.apps.ResourceManagementConfig',
-    'Notifications.apps.NotificationsConfig'
+    'mail'
     # 'phonenumber_field',
     # 'phone_field',
 
@@ -137,3 +137,10 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '1008jainsamyak1@gmail.com'
+EMAIL_HOST_PASSWORD = 'Jainsamyak@1'
