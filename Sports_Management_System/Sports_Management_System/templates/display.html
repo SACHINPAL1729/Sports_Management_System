@@ -30,14 +30,18 @@
   <body>
     <!-- Code fir About Section -->
     <div class="about">
-      <h1>About</h1>
+      <h1 style="background-color: #32e0c4;height: 10rem; text-align: center;padding-top: 2.5rem;">About</h1>
       <h2>
       {{event_details.name}}</h2>
       <h3>{{event_details.about}}</h3>
 
     <!-- Code for Rule Section -->
     </div>
-    <h1>Rules</h1>
+    
+    <hr style="margin-left:90px; height:2px;border-width:4px;color:gray;background-color:gray;width: 90%;">
+
+
+    <h1 >Rules</h1>
     <!-- {% with temp=0 %} -->
     <!-- {% firstof 'rule1' as temp %} -->
     <div class="rules alignment" style="text-align:left; padding-left:60px;">
@@ -52,8 +56,10 @@
 
     <!-- {%endwith%} -->
 
+    <hr style="margin-left:90px; height:2px;border-width:4px;color:gray;background-color:gray;width: 90%;">
+
     <!-- Code for Prize Section -->
-    <h1>Prize</h1>
+    <h1 >Prize</h1>
     {%for i in winners %}
       
       <h2><span><b>First Prize:</b></span>
@@ -64,8 +70,11 @@
       {{i.third_prize}}</h2>
     {% endfor %}
 
+
+<hr style="margin-left:90px; height:2px;border-width:4px;color:gray;background-color:gray;width: 90%;">
+
    <!-- Code for Guests Section -->
-    <h1>Guests</h1>
+    <h1 >Guests</h1>
     {% for guest in guest_details %}
               <div class="container ">
                   <img src="{{guest.image.url}}" alt="" style="height:350px; width:400px">
@@ -74,8 +83,10 @@
               </div>
     {% endfor %}
 
+
+<hr style="margin-left:90px; height:2px;border-width:4px;color:gray;background-color:gray;width: 90%;">
 <!-- Code for Contact Details Section -->
-    <h1>Contact Details</h1>
+    <h1 >Contact Details</h1>
     {% for i in contact_details %}
     <ul>
       <li>
@@ -87,8 +98,10 @@
     </ul>
     {% endfor %}
 
+<hr style="margin-left:90px; height:2px;border-width:4px;color:gray;background-color:gray;width: 90%;">
+
 <!-- Code for Viewers Link Section -->
-    <h1>Viewers Link</h1>
+    <h1 >Viewers Link</h1>
       <h2>Link for Live stream of the match is : <a href={{event_details.link}}>{{event_details.link}}</a></h2>
 
     
@@ -125,6 +138,8 @@
     </div>
     {% endfor %}
   </div> -->
+
+<hr style="margin-left:90px; height:2px;border-width:4px;color:gray;background-color:gray;width: 90%;">
 
   <h1>Leader Board</h1>
  <table style="width:100%">
