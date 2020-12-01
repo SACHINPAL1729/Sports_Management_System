@@ -1,7 +1,44 @@
-{% extends 'base.html' %}
-{% block title %} Notifications {% endblock %}
+{% extends 'base.html'%}
+
+{% block title %}Notifications {% endblock %}
+
+
 {% block body %}
 
-<h1>Notifications recieved</h1>
-
+	<section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+        <div class="column is-offset-0 is-6">
+          <h2 class="title" style="font-size: 4rem;color: red;">
+            LATEST UPDATES
+          </h2 >
+        </div>
+            </div>
+        </div>
+  </section>
+	
+	<br>
+	<div class="col-md-9" style="margin-left: 200px;">
+              <div class="panel panel-default">
+                  <div class="panel-heading" style="background-color: #8CD6EF;">
+                    <span class="glyphicon glyphicon-bullhorn"></span><h2><b>RECENT ANNOUNCEMENTS</b></h2>
+                  </div>
+               </div>
+                 <div class="panel-body">
+                 	{% for i in crnt_notif %}
+                    <div class="row" style="display: table-row;">
+                      <div class="col-xs-12">
+                          <ul class="demo2">
+						  <li class="news-item" style="color:red; border-bottom: 2px dotted grey;padding-top: 30px">
+                                <b>
+                                    <a href="#" style="color:red">{{i.heading}}</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="#" style="color:red">{{i.subject}}</a>
+                                    <!-- <IMG height=20 src="../images/new.gif" width=25 border=0 /> -->
+                                </b>
+                            </li>
+                        </ul>
+                     </div>
+                    </div>
+                    {% endfor %}
+            	</div>
+        </div>
 {% endblock %}
