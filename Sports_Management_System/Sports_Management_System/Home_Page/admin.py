@@ -25,10 +25,10 @@ class RegistrationDataAdmin(admin.ModelAdmin):
             for i in queryset:
                 print("Samyak Jain")
                 if i.email:
-                    send_mail('Arrey faaltu ki mail h, ignore kar', 'Aur Chacha kya maaze aa rhe', '1008jainsamyak1@gmail.com',[i.email], fail_silently=False)
+                    send_mail('Participation Welcome', 'We heartly welcomes you to our Events! Different Details will be shared soon.', '1008jainsamyak1@gmail.com',[i.email], fail_silently=False)
                 else:
                     self.message_user(request, "Mail sent successfully ") 
-    send_EMAIL.short_description = "Send an email to selected users"
+    send_EMAIL.short_description = "Send an email to selected users for Welcome."
 
     
 admin.site.register(RegistrationData,RegistrationDataAdmin)
