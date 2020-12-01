@@ -55,10 +55,13 @@
     <!-- Code for Prize Section -->
     <h1>Prize</h1>
     {%for i in winners %}
-      <h2>{{i.event_name}}</h2>
-      <h2>{{i.first_prize}} </h2>
-      <h2>{{i.second_prize}} </h2>
-      <h2>{{i.third_prize}} </h2>
+      
+      <h2><span><b>First Prize:</b></span>
+      {{i.first_prize}}</h2>
+      <h2><span><b>Second Prize:</b></span>
+      {{i.second_prize}}</h2>
+      <h2><span><b>Third Prize:</b></span>
+      {{i.third_prize}}</h2>
     {% endfor %}
 
    <!-- Code for Guests Section -->
@@ -86,7 +89,7 @@
 
 <!-- Code for Viewers Link Section -->
     <h1>Viewers Link</h1>
-      <h2>Link for Live stream of the match is : <a href="#">{{event_details.link}}</a></h2>
+      <h2>Link for Live stream of the match is : <a href={{event_details.link}}>{{event_details.link}}</a></h2>
 
     
     <!-- <h2>Player_id   Player_name  PLayer_Points</h2> -->

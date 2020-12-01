@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'Events.apps.EventsConfig',
     'Feedback.apps.FeedbackConfig',
     'Resource_Management.apps.ResourceManagementConfig',
-    'mail'
+    'mail',
+    'Notifications.apps.NotificationsConfig',
     # 'phonenumber_field',
     # 'phone_field',
 
