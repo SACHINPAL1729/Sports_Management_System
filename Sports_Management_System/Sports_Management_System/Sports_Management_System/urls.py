@@ -21,6 +21,9 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 from django.conf.urls import url
 
+admin.site.site_header =  "Sports Management System"
+admin.site.index_title = "Welcome to Applications"
+admin.site.site_title = "Sports Admin Portal"
 urlpatterns = [
     path('',include('Home_Page.urls')),
     path('register/',include('Home_Page.urls')),
