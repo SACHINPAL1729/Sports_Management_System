@@ -18,7 +18,8 @@ def home(request):
 
         current = str(timezone.now())
         if(current<str(i.timestamp_for_finish)):
-            current_event.append(details)
+            if(current>=str(i.timestamp)):
+                current_event.append(details)
 
 
 

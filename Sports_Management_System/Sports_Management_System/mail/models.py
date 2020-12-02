@@ -7,8 +7,8 @@ from Home_Page.models import *
 
 
 class MailText(models.Model):
-    subject = models.CharField(max_length=500)
-    message = models.CharField(max_length=500)
+    subject = models.TextField(max_length=500)
+    message = models.TextField(max_length=1000)
     event_id = models.IntegerField(default='-1')
     # attachment = models.FileField()
     send_it = models.BooleanField(default=False) #check it if you want to send your email
