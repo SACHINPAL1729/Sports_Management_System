@@ -9,6 +9,7 @@ def Resource_Management(request):
         temp = {
             'name' : i.name,
             'available' : i.available,
+            'requirement' : i.requirement,
         }
         resource.append(temp)
     
